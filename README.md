@@ -1,69 +1,44 @@
-# React + TypeScript + Vite
+# 🧪 Teko Frontend Coding Interview — Bài Test Kỹ Thuật (Phần 2)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Dự án này là bài kiểm tra kỹ năng frontend thực hành dành cho ứng viên tham gia phỏng vấn tại **Teko Vietnam**. Bài test tập trung vào việc đánh giá khả năng ứng dụng **TypeScript**, xử lý DOM bằng **JavaScript thuần**, xây dựng UI với **HTML/CSS**, và tổ chức mã nguồn rõ ràng, dễ bảo trì.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Mục Tiêu Bài Test
 
-## Expanding the ESLint configuration
+- Tạo ứng dụng frontend không dùng framework như React/Vue
+- Xử lý logic bằng **TypeScript** kết hợp **JavaScript** DOM
+- Tạo giao diện responsive với **CSS3**
+- Tổ chức dự án rõ ràng theo mô hình component/function
+- Áp dụng nguyên tắc clean code và separation of concerns
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🧰 Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+| Category         | Stack                                |
+|------------------|--------------------------------------|
+| 💻 Ngôn ngữ chính | TypeScript (48.4%), JavaScript (16.1%) |
+| 🎨 Giao diện      | HTML5 (10.2%), CSS3 (25.3%)          |
+| 📦 Module hóa     | Tách file chức năng riêng biệt       |
+| 🔧 Build tool     | Dùng `tsc` hoặc chạy thủ công         |
+| 💡 DOM Handling   | Thuần JavaScript (document, events...) |
+| 🧪 Testing         | Manual (qua browser)                 |
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+## 🚀 Cách Chạy Dự Án
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+> **Yêu cầu:** Node.js + TypeScript CLI
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+# Clone repository
+git clone https://github.com/Wiken2k3/FrontEnd-Teko-Coding-Interview-2.git
+cd FrontEnd-Teko-Coding-Interview-2
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# Cài đặt TypeScript nếu chưa có
+npm install -g typescript
+
+# Biên dịch .ts sang .js
+tsc
+
+# Mở file index.html trong trình duyệt để xem kết quả
